@@ -1,6 +1,6 @@
 # Psychic Medium Chat
 
-Fresh deployment test
+Fresh deployment test - Manual trigger
 
 A clean, minimal chat interface powered by Claude API with knowledge base integration.
 
