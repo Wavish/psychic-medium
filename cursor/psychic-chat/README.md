@@ -1,5 +1,7 @@
 # Psychic Medium Chat
 
+Fresh deployment test
+
 A clean, minimal chat interface powered by Claude API with knowledge base integration.
 
 ## Setup
