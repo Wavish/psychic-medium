@@ -1,4 +1,5 @@
 import Anthropic from '@anthropic-ai/sdk';
+import { NextResponse } from 'next/server';
 import { loadKnowledgeBase } from '@/lib/knowledge-base';
 
 const anthropic = new Anthropic({
@@ -10,8 +11,8 @@ export async function POST(request: Request) {
     const { messages } = await request.json();
 
     // Security: Check for prompt injection attempts
-    const userMessages = messages.filter(msg => msg.role === 'user');
-    const allUserText = userMessages.map(msg => msg.content).join(' ').toLowerCase();
+    const userMessages = messages.filter((msg: any) => msg.role === 'user');
+    const allUserText = userMessages.map((msg: any) => msg.content).join(' ').toLowerCase();
     
     const suspiciousPatterns = [
       'system prompt', 'ignore previous', 'forget everything', 'new instructions',
